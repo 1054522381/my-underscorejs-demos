@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>my underscore demos</title>
+</head>
+<body>
+
+</body>
+    <script src="http://the5fireblog.b0.upaiyun.com/staticfile/jquery-1.10.2.js"></script>
+	<script src="lib/underscore.js"></script>
+    <script>
+ 
+(function($){
+
+    _.each([1, 2, 3], fun1);
+	function fun1(element,index,list){
+		console.log("element:" + element + ";index:" + index + ";list:" + list);
+		
+	}
+	
+	_.each({one: 1, two: 2, three: 3}, fun2);
+	function fun2(value,key,list){
+		console.log("value:" + value + ";key:" + key + ";list:" + JSON.stringify(list));
+	}
+		 
+})(jQuery); 
+
+    </script>
+
+</html>

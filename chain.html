@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>my underscore demos</title>
+</head>
+<body>
+
+</body>
+    <script src="http://the5fireblog.b0.upaiyun.com/staticfile/jquery-1.10.2.js"></script>
+	<script src="lib/underscore.js"></script>
+    <script>
+ 
+(function($){
+
+
+var lyrics = [
+  {line: 1, words: "I'm a lumberjack and I'm okay"},
+  {line: 2, words: "I sleep all night and I work all day"},
+  {line: 3, words: "He's a lumberjack and he's okay"},
+  {line: 4, words: "He sleeps all night and he works all day"}
+];
+
+function fun1(){
+	return _.chain(lyrics)
+	  .map(function(line) { return line.words.split(' '); })
+	  .flatten() // Flattens a nested array (the nesting can be to any depth).
+	  .reduce(function(counts, word) {
+	    counts[word] = (counts[word] || 0) + 1;
+	    return counts;
+	  }, {})
+	  .value();
+}
+
+
+console.log(fun1()); 
+// output:compact=>1,2,3,4 # n 为剔除的元素个数 # false, null, 0, "", undefined and NaN 
+
+		 
+})(jQuery); 
+
+    </script>
+
+</html>

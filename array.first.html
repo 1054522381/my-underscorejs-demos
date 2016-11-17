@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>my underscore demos</title>
+</head>
+<body>
+
+</body>
+    <script src="http://the5fireblog.b0.upaiyun.com/staticfile/jquery-1.10.2.js"></script>
+	<script src="lib/underscore.js"></script>
+    <script>
+ 
+(function($){
+
+console.log("first=>" + _.first([5, 4, 3, 2, 1])); // output:first=>5
+console.log("=====================");
+console.log("first n=>" + _.first(['a', 'b', 3, 'd', 5],2)); // output:first n=>a,b
+console.log("first n=>" + _.first(['a', 'b', 3, 'd', 5],4)); // output:first n=>a,b,3,d
+
+		 
+})(jQuery); 
+
+    </script>
+
+</html>

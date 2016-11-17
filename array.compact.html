@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>my underscore demos</title>
+</head>
+<body>
+
+</body>
+    <script src="http://the5fireblog.b0.upaiyun.com/staticfile/jquery-1.10.2.js"></script>
+	<script src="lib/underscore.js"></script>
+    <script>
+ 
+(function($){
+
+console.log("compact=>" + _.compact([0, 1, false, 2, '', null,3,undefined,NaN,4])); 
+// output:compact=>1,2,3,4 # n 为剔除的元素个数 # false, null, 0, "", undefined and NaN 
+
+		 
+})(jQuery); 
+
+    </script>
+
+</html>

@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>my underscore demos</title>
+</head>
+<body>
+
+</body>
+    <script src="http://the5fireblog.b0.upaiyun.com/staticfile/jquery-1.10.2.js"></script>
+	<script src="lib/underscore.js"></script>
+    <script>
+ 
+(function($){
+
+_.map([1, 2, 3], function(num,index){ console.log("num*3=>" + num*3 + ";index=>" + index) ; });
+console.log("=====================");
+
+
+_.map({one: 1, two: 2, three: 3}, function(num, key){ console.log("num*3=>" + num * 3 + ";key=>" + key); });
+console.log("=====================");
+
+console.log("first=>" + _.map([[1, 2], [3, 4]], _.first)); // output:first=>1,3
+
+		 
+})(jQuery); 
+
+    </script>
+
+</html>

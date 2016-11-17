@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>my underscore demos</title>
+</head>
+<body>
+
+</body>
+    <script src="http://the5fireblog.b0.upaiyun.com/staticfile/jquery-1.10.2.js"></script>
+	<script src="lib/underscore.js"></script>
+    <script>
+ 
+(function($){
+
+console.log("initial=>" + _.initial([5, 4, 3, 2, 1])); // output:initial=>5,4,3,2
+console.log("=====================");
+console.log("initial n=>" + _.initial(['a', 'b', 3, 'd', 5],2)); 
+// output:initial n=>a,b,3 # n 为数组末尾被排除的元素个数
+
+console.log("initial n=>" + _.initial(['a', 'b', 3, 'd', 5],4)); // output:initial n=>a
+
+		 
+})(jQuery); 
+
+    </script>
+
+</html>

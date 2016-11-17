@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>my underscore demos</title>
+</head>
+<body>
+
+</body>
+    <script src="http://the5fireblog.b0.upaiyun.com/staticfile/jquery-1.10.2.js"></script>
+	<script src="lib/underscore.js"></script>
+    <script>
+ 
+(function($){
+
+console.log("rest=>" + _.rest(['a', 'b', 3, 'd', 5])); // output:rest=>b,3,d,5 # 默认n为1，剔除第一个元素
+console.log("=====================");
+console.log("rest n=>" + _.rest(['a', 'b', 3, 'd', 5],2)); 
+// output:rest n=>3,d,5 # n 为剔除的元素个数
+
+console.log("rest n=>" + _.rest(['a', 'b', 3, 'd', 5],4)); // output:rest n=>5
+
+		 
+})(jQuery); 
+
+    </script>
+
+</html>
