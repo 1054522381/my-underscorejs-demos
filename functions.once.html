@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>my underscore demos</title>
+</head>
+<body>
+</body>
+    <script src="http://the5fireblog.b0.upaiyun.com/staticfile/jquery-1.10.2.js"></script>
+	<script src="lib/underscore.js"></script>
+    <script>
+ 
+(function($){
+	var count = 0;
+	function addCount(){
+		console.log("count=>" + (++count));
+	}
+	var initialize = _.once(addCount);
+	initialize();
+	initialize();
+
+	//output:count=>1
+
+})(jQuery); 
+
+    </script>
+
+</html>

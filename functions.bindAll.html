@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>my underscore demos</title>
+</head>
+<body>
+<button id="underscore_button" >click</button>
+</body>
+    <script src="http://the5fireblog.b0.upaiyun.com/staticfile/jquery-1.10.2.js"></script>
+	<script src="lib/underscore.js"></script>
+    <script>
+ 
+(function($){
+
+var buttonView = {
+  label  : "buttonView's label",
+  onClick: function(){ 
+  	console.log("this=>" + this);
+  	alert('clicked: ' + this.label);
+  },
+  onHover: function(){ console.log('hovering: ' + this.label); }
+};
+_.bindAll(buttonView, 'onClick', 'onHover');
+// When the button is clicked, this.label will have the correct value.otherwise,this.label would be undefined
+jQuery('#underscore_button').bind('click', buttonView.onClick);
+		 
+})(jQuery); 
+
+    </script>
+
+</html>

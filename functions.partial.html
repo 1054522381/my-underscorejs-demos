@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>my underscore demos</title>
+</head>
+<body>
+</body>
+    <script src="http://the5fireblog.b0.upaiyun.com/staticfile/jquery-1.10.2.js"></script>
+	<script src="lib/underscore.js"></script>
+    <script>
+ 
+(function($){
+
+var subtract = function(a, b) { console.log("substract result=" + (b - a)); };
+sub5 = _.partial(subtract, 5); // 5 -> a
+sub5(20); // 20 -> b
+// output:substract result=15
+
+
+subFrom20 = _.partial(subtract, _, 20); // b -> 20
+subFrom20(5); // a -> 5
+// output:substract result=15
+
+})(jQuery); 
+
+    </script>
+
+</html>
